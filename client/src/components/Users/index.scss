@@ -1,0 +1,92 @@
+.users {
+    width: 100%;
+    padding: 0 20px;
+    background-color: rgb(218, 218, 218);
+    min-height: 100vh;
+
+    .deleteModal {
+        opacity: 0;
+        visibility: hidden;
+        // transform: scale(0.5);
+        transition: all .5s;
+        width: 230px;
+        height: 180px;
+        background-color: white;
+        text-align: center;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        gap: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 1px solid gray;
+        z-index: 9;
+
+        div {
+
+            display: flex;
+            gap: 5px;
+            :first-child{
+                background-color: red;
+            }
+            :nth-child(2){
+                background-color: green;
+            }
+
+            button {
+                padding: 10px 20px;
+                cursor: pointer;
+                color: white;
+                &:hover{
+                    background-color: black;
+                }
+            }
+
+        }
+    }
+
+    h1 {
+        padding: 30px 0;
+        letter-spacing: 3px;
+        text-align: center;
+        // border-bottom: 2px solid blue;
+
+    }
+
+    table {
+        margin-top: 20px;
+        // border: 1px solid blue;
+        width: 100%;
+        border: 1px solid gray;
+
+        th,
+        td {
+            padding: 10px 20px;
+        }
+
+        td {
+            text-align: center;
+
+            i {
+                color: red;
+                cursor: pointer;
+
+                &:hover {
+                    color: blue;
+                }
+            }
+        }
+    }
+}
+
+.openDeleteModal {
+    opacity: 1 !important;
+    visibility: visible !important;
+    // transform: scale(1) !important;
+}
+

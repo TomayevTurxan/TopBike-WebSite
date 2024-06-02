@@ -1,0 +1,198 @@
+.basket {
+    width: 320px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+    background-color: #f7f7f7;
+    transform: translateX(320px);
+    transition: all .3s ease-in-out;
+    border-left: 1px solid black;
+    overflow-y: scroll;
+
+
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    .basket-head {
+        position: sticky;
+        top: 0;
+        left: 0;
+        background-color: white;
+        display: flex;
+        border-bottom: 1px solid gray;
+
+        .fa-xmark {
+            cursor: pointer;
+            font-size: 20px;
+
+            &:hover {
+                background-color: black;
+                color: white;
+            }
+        }
+
+
+        i,
+        p,
+        h2 {
+            padding: 8.5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        i,
+        p {
+            width: 12%;
+        }
+
+        h2 {
+            width: 76%;
+            border-right: 1px solid gray;
+            border-left: 1px solid gray;
+
+        }
+    }
+
+    .product-container {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+
+        .product {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid gray;
+            padding: 5px 0;
+
+            .img {
+                width: 20%;
+                margin-right: 20px;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .bas-details {
+                text-align: left;
+                line-height: 1.5;
+                width: 75%;
+
+                :first-child {
+                    cursor: pointer;
+
+                    &:hover {
+                        color: rgb(158, 111, 30);
+                    }
+
+                }
+
+                p {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+
+
+                    span {
+                        cursor: pointer;
+                        font-size: 12px;
+                        color: white;
+                        padding: 0 5px;
+                        background-color: rgb(0, 0, 0);
+                        border-radius: 100%;
+                        transition: all .3s;
+
+                        &:hover {
+                            background-color: rgb(158, 111, 30);
+                            color: black;
+                        }
+                    }
+
+                    :nth-child(2) {
+                        padding: 0 7px 1px 7px;
+                    }
+                }
+            }
+
+            .fa-trash-can {
+                cursor: pointer;
+
+                &:hover {
+                    color: rgb(158, 111, 30);
+                }
+            }
+        }
+    }
+
+    .cart-bottom {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+
+        .total {
+            font-weight: bold;
+            font-size: 1.3em;
+            padding: 20px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: white;
+
+            :nth-child(2) {
+                color: goldenrod;
+            }
+        }
+
+        .view-cart {
+            display: flex;
+            width: 100%;
+
+            button {
+                width: 50%;
+                padding: 20px 0;
+                font-weight: bold;
+                color: white;
+                letter-spacing: 1.5px;
+                transition: all .3s;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: goldenrod;
+                    border: 1px solid goldenrod;
+                }
+            }
+
+            :nth-child(1) {
+                background-color: #2a2a2a;
+                border: 1px solid #2a2a2a;
+            }
+
+            :nth-child(2) {
+                background-color: black;
+                border: 1px solid black;
+            }
+        }
+    }
+}
+
+.basket-open {
+    transform: translateX(0) !important;
+}
+
+.disabled-button-color {
+    background-color: gray;
+    color: rgb(208, 208, 208);
+}
+
+.cart-bottom-position {
+    position: sticky !important;
+}

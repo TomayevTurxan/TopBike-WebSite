@@ -1,0 +1,171 @@
+.mob-nav {
+    width: 320px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 10;
+    background-color: white;
+    border-right: 1px solid black;
+    transform: translateX(-320px);
+    transition: all .3s ease-in-out;
+
+    .mob-nav-icons {
+        width: 100%;
+        padding: 5px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        border-bottom: 1px solid black;
+
+        .profile-img {
+            display: flex;
+            align-items: center;
+            position: relative;
+
+            .profile-sub-menu {
+                z-index: 10;
+                opacity: 0;
+                visibility: hidden;
+                position: absolute;
+                background-color: white;
+                width: 180px;
+                height: 80px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 10px;
+                padding: 10px;
+                border-radius: 5px;
+                top: 50px;
+                left: -50px;
+                color: black;
+                transition: all .3s;
+
+                .changeImage {
+                    input {
+                        position: absolute;
+                        left: 0;
+                        opacity: 0;
+                        width: 180px;
+                        cursor: pointer;
+                        z-index: 5;
+                    }
+                }
+
+                div {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    font-size: 0.7em;
+                    color: rgb(74, 74, 74);
+
+                    &:hover {
+                        color: orange;
+                    }
+                }
+            }
+        }
+
+        i {
+            color: rgb(72, 72, 72);
+            font-size: 20px;
+            position: relative;
+            cursor: pointer;
+
+            &:hover {
+                color: orange;
+            }
+
+            .cartMessage {
+                position: absolute;
+                font-weight: normal;
+                font-size: 15px;
+                background-color: #ffab00;
+                padding: 2px 5px;
+                border-radius: 100%;
+                bottom: -10px;
+                right: -13px;
+                color: rgb(72, 72, 72);
+            }
+        }
+    }
+
+    .mob-nav-texts {
+        width: 100%;
+        height: 570px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+
+        .mob-nav-ul-li {
+            background-color: rgb(72, 72, 72);
+            width: 200px;
+            text-align: center;
+            padding: 10px 0;
+            border-radius: 35px;
+            border: 1px solid transparent;
+            cursor: pointer;
+
+            &:hover {
+                background-color: black;
+                border-color: orange;
+                color: white;
+            }
+        }
+
+        .mobNavLink {
+            cursor: pointer;
+            color: white;
+            font-weight: bold;
+
+        }
+
+        .mobNavLink.active {
+            color: orange;
+        }
+    }
+
+}
+
+
+
+.profileActive {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.nav-open {
+    transform: translateX(0) !important;
+}
+
+.mobOverLay {
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    cursor: auto;
+    background-color: rgb(0, 0, 0, .6);
+}
+
+@media screen and (max-width: 576px) {
+    .mob-nav{
+        .mob-nav-icons{
+            padding: 10px 0;
+        }
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .mob-nav {
+        display: none;
+    }
+
+    .mobOverLay {
+        display: none;
+    }
+}

@@ -1,0 +1,53 @@
+.adminNavbar {
+    width: 300px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgb(0, 21, 36);
+    background: linear-gradient(10deg, rgba(0, 21, 36, 1) 0%, rgba(200, 117, 0, 1) 65%);
+
+    .adminLogo {
+        width: 70%;
+        text-align: center;
+        padding: 40px 0;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .adminNavbarInner {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        gap: 10px;
+        text-align: center;
+
+        .adminNavLink {
+            width: 200px;
+            border-radius: 35px;
+            padding: 10px 40px;
+            background-color: white;
+            font-weight: bold;
+            color: black;
+
+
+        }
+
+
+
+        .adminNavLink.active {
+            background-color: rgb(12, 9, 5);
+            color: white;
+        }
+
+
+    }
+}

@@ -1,0 +1,197 @@
+#checkOut {
+    min-height: 100vh;
+    display: flex;
+
+    .leftBox {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        padding: 50px 70px;
+        flex-direction: column;
+
+        .paymentBox {
+            margin-top: 50px;
+            width: 500px;
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+
+            p {
+                font-size: 25px;
+            }
+
+            span {
+                font-size: 15px;
+                color: gray;
+            }
+
+            .storeBox {
+                height: 150px;
+                background: #FAFAFA;
+                color: gray;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                i {
+                    font-size: 40px;
+                }
+
+                p {
+                    font-size: 15px;
+                }
+            }
+
+            .payNowBtn {
+                height: 50px;
+                background: #FAFAFA;
+                border-radius: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid gray;
+                cursor: pointer;
+                color: gray;
+            }
+        }
+    }
+
+    .rightBox {
+        border-left: 1px solid gray;
+        background: #FAFAFA;
+        width: 50%;
+        padding: 90px 50px;
+
+        .upBox {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            margin-top: 20px;
+
+            .imgBox {
+                width: 70px;
+                height: 70px;
+                position: relative;
+                margin-bottom: 5px;
+
+                img {
+                    width: 70px;
+                    border-radius: 5px;
+                    border: 2px solid gray;
+                }
+
+                .countBox {
+                    position: absolute;
+                    top: -5px;
+                    right: -5px;
+                    height: 20px;
+                    width: 20px;
+                    border-radius: 50%;
+                    background: gray;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 12px;
+                    color: white;
+                }
+            }
+
+            .textBox {
+                h1 {
+                    font-size: 18px;
+                }
+
+                p {
+                    font-size: 15px;
+                    color: gray;
+                }
+            }
+
+            .priceBox {
+                margin-left: 50px;
+            }
+        }
+
+        .downBox {
+            margin-top: 40px;
+
+            .normalBox {
+                display: flex;
+                justify-content: space-between;
+                padding: 5px 0px;
+                width: 420px;
+
+                h2 {
+                    font-size: 22px;
+                }
+
+                .box {
+                    display: flex;
+                    gap: 10px;
+                    justify-content: center;
+                    align-items: center;
+
+                    p {
+                        font-size: 17px;
+                    }
+
+                    span {
+                        font-size: 13px;
+                        color: gray;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #checkOut {
+        flex-wrap: wrap;
+
+        .leftBox {
+            width: 100%;
+
+            .paymentBox {
+                width: 100%;
+            }
+        }
+
+        .rightBox {
+            width: 100%;
+            padding: 50px 10px;
+
+            .textBox {
+                h1 {
+                    font-size: .8em !important;
+                }
+            }
+            .imgBox{
+                width: 50px !important;
+                img{
+                    width: 50px !important;
+                }
+            }
+
+            .normalBox {
+                width: 320px !important;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+    #checkOut {
+        flex-wrap: wrap;
+
+        .leftBox {
+            width: 100%;
+        }
+
+        .rightBox {
+            width: 100%;
+        }
+    }
+}

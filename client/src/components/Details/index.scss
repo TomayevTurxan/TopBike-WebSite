@@ -1,0 +1,303 @@
+.details {
+    width: 100%;
+    min-height: 100vh;
+
+    .det-head {
+        width: 100%;
+        height: 220px;
+        padding: 120px 0 30px 0;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+
+        .backImg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            width: 100%;
+            height: 250px;
+            filter: contrast(50%);
+            background-image: url('https://topbike-store-demo.myshopify.com/cdn/shop/files/slider2.jpg?v=1613576060');
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .bottom-img {
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    }
+
+    .det-wrapper {
+        width: 90%;
+        margin: auto;
+        display: flex;
+        padding: 30px 0;
+
+        .det-prod {
+            width: 75%;
+            display: flex;
+
+            .det-img {
+                width: 40%;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .det-texts {
+                width: 60%;
+                padding: 40px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+
+                .det-name {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    .icon {
+                        font-size: 1.2em;
+                        gap: 10px;
+                        display: flex;
+
+                        i {
+                            cursor: pointer;
+                        }
+
+                        .comment-icon {
+                            position: relative;
+
+                            &:hover .description {
+                                opacity: 1 !important;
+                                visibility: visible !important;
+
+                            }
+
+                            .description {
+                                opacity: 0;
+                                visibility: hidden;
+                                transition: all .3s;
+                                width: 100px;
+                                position: absolute;
+                                top: -40px;
+                                left: -40px;
+                                background-color: #000000;
+                                color: white;
+                                padding: 10px;
+                                border-radius: 8px;
+                                font-size: .6em;
+                                border: 1px solid black;
+
+                                i {
+                                    position: absolute;
+                                    bottom: -10px;
+                                    left: 50%;
+                                    transform: translate(-50%);
+                                    font-size: 1.6em;
+                                    color: black;
+                                }
+                            }
+
+                        }
+
+                    }
+
+                    .fa-heart {
+                        cursor: pointer;
+                        transition: all .3s;
+
+                        &:hover {
+                            color: goldenrod;
+                        }
+                    }
+                }
+
+                .prod-qty {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .add-button {
+                        padding: 20px 0;
+                        width: 45%;
+                        color: white;
+                        font-weight: bold;
+                        letter-spacing: 2px;
+                        cursor: pointer;
+                        transition: all .3s;
+                        background-color: goldenrod;
+                        border: 1px solid goldenrod;
+
+                        &:hover {
+                            background-color: black;
+                            border: 1px solid black;
+
+                        }
+                    }
+                }
+
+                .buy-button {
+                    width: 45%;
+                    padding: 20px 0;
+                    color: white;
+                    font-weight: bold;
+                    letter-spacing: 2px;
+                    cursor: pointer;
+                    transition: all .3s;
+                    background-color: black;
+                    border: 1px solid black;
+
+                    &:hover {
+                        background-color: goldenrod;
+                        border: 1px solid goldenrod;
+                    }
+                }
+
+                .comment {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 20px;
+
+                    input {
+                        height: 40px;
+                        outline: none;
+                        border: none;
+                        border-bottom: 2px solid transparent;
+                        font-size: 1.2em;
+
+                        &:focus {
+                            border-color: orange;
+                        }
+                    }
+
+                    i {
+                        color: black;
+                        font-size: 20px;
+                        cursor: pointer;
+
+                        &:hover {
+                            color: orange;
+                        }
+                    }
+                }
+            }
+        }
+
+        .choose {
+            width: 25%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .choose-card {
+                width: 100%;
+                padding: 20px;
+                border: 1px solid rgb(189, 189, 189);
+                line-height: 2;
+                cursor: pointer;
+
+                &:hover {
+                    border-color: black;
+                }
+
+                p {
+                    color: gray;
+                }
+            }
+
+        }
+
+    }
+}
+
+
+@media screen and (max-width: 576px) {
+    .details {
+        .det-wrapper {
+            width: 95%;
+            flex-wrap: wrap;
+
+            .det-prod {
+                width: 100%;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                .det-img {
+                    width: 100%;
+                }
+
+                .det-texts {
+                    width: 100%;
+                    padding: 40px 20px;
+                    .det-name{
+                        gap: 10px;
+                        h3{
+                            font-size: .8em;
+                        }
+                    }
+                    .prod-qty {
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        gap: 20px;
+                        .add-button,
+                        .buy-button {
+                            width: 90%;
+                        }
+                    }
+                    .description{
+                        display: none;
+                    }
+                }
+            }
+
+            .choose {
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+    .details {
+        .det-wrapper {
+            width: 95%;
+
+            .det-prod {
+                width: 65%;
+                flex-wrap: wrap;
+
+                .det-img {
+                    width: 100%;
+                }
+
+                .det-texts {
+                    width: 100%;
+                }
+            }
+
+            .choose {
+                width: 35%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .details {
+        .det-wrapper {
+            width: 95%;
+        }
+    }
+}

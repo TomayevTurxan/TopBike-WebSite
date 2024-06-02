@@ -1,0 +1,10 @@
+#notMeanBox{
+    height: 109.5px;
+    background-color: rgba(0, 0, 0, 0.886);
+}
+
+@media only screen and (max-width: 1201px) {
+#notMeanBox{
+    height: 71px;
+}
+}

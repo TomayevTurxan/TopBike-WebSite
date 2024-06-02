@@ -1,0 +1,82 @@
+.collection {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    line-height: 2;
+    overflow: hidden;
+
+    &:hover .backImg {
+        transform: scale(1.07);
+    }
+
+    .backImg {
+        width: 100%;
+        height: 400px;
+        position: absolute;
+        background-image: url('https://topbike-store-demo.myshopify.com/cdn/shop/files/Biking-Basics-5-Essential-Bike-Tools-to-Take-with-You-on-a-Cycling-Adventure.jpg?v=1613576668');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -1;
+        transition: all .5s;
+        filter: contrast(50%);
+
+    }
+
+    .top-img,
+    .bottom-img {
+        position: absolute;
+        left: 0;
+        width: 100%;
+    }
+
+    .top-img {
+        transform: rotate(180deg);
+        top: 0;
+    }
+
+    .bottom-img {
+        bottom: 0;
+    }
+
+    p {
+        font-size: 40px;
+
+    }
+
+    span {
+        letter-spacing: 2px;
+        font-size: 20px;
+    }
+
+    button {
+        cursor: pointer;
+        padding: 15px 30px;
+        border: 2px solid black;
+        background-color: transparent;
+        transition: all .5s;
+
+        &:hover {
+            background-color: goldenrod;
+            color: white;
+            border-color: goldenrod;
+            box-sizing: border-box;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .collection {
+        text-align: center;
+        font-size: .9em;
+
+        .backImg {
+            background-position: -460px;
+        }
+    }
+}

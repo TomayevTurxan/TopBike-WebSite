@@ -1,0 +1,46 @@
+.resetPassword {
+    position: fixed;
+    width: 400px;
+    height: 570px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    z-index: 11;
+
+
+    .label {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 5px;
+        font-size: .8em;
+        input{
+            width: 17px;
+        }
+    }
+
+    .input {
+        position: relative;
+        z-index: 4;
+        width: 80%;
+
+        input {
+            width: 100%;
+        }
+
+
+    }
+
+    .backToLogin {
+        color: gray;
+        cursor: pointer;
+
+        &:hover {
+            color: orange;
+        }
+    }
+}

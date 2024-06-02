@@ -1,0 +1,129 @@
+@mixin MyFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    height: 100vh;
+
+    .swiper {
+        width: 100%;
+        height: 100%;
+
+        .slider1Box {
+            background-image: url(https://topbike-store-demo.myshopify.com/cdn/shop/files/slideshow_4.jpg?v=1613575294);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .slider2Box {
+            background-image: url(https://topbike-store-demo.myshopify.com/cdn/shop/files/slideshow_3.jpg?v=1613575289);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .slider1Box,
+        .slider2Box {
+            width: 100%;
+            height: 100%;
+
+            .sliderBox {
+                height: 100%;
+                @include MyFlex;
+                flex-direction: column;
+                align-items: start;
+                padding: 0px 150px 0px;
+                color: white;
+                gap: 20px;
+
+                h1 {
+                    font-size: 70px;
+                    margin-bottom: 10px;
+                }
+
+                p {
+                    font-size: 25px;
+                }
+
+                .headerBtn {
+                    margin-top: 30px;
+                    padding: 14px 25px;
+                    border: 1px solid white;
+                    cursor: pointer;
+                    transition: 0.2s;
+
+                }
+
+                .headerBtn:hover {
+                    background-color: #ffab00;
+                    border: 1px solid #ffab00;
+                    color: black;
+                    transition: 0.2s;
+
+                }
+            }
+        }
+
+        .swiper-button-prev:after,
+        .swiper-button-next:after {
+            color: white;
+        }
+    }
+}
+
+@media only screen and (max-width: 811px) {
+    .swiper {
+
+        .slider1Box,
+        .slider2Box {
+            .sliderBox {
+                padding: 0px 0px 0px;
+
+                h1 {
+                    font-size: 50px;
+                }
+
+                p {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        .swiper-button-prev:after,
+        .swiper-button-next:after {
+            display: none;
+        }
+    }
+}
+
+@media only screen and (max-width: 476px) {
+    header {
+        .swiper {
+            .slider1Box {
+                background-position: -800px;
+            }
+
+            .slider2Box {
+                background-color: -400px;
+            }
+
+            .slider1Box,
+            .slider2Box {
+                .sliderBox {
+                    padding: 0px 30px 0px;
+
+                    h1 {
+                        font-size: 3em;
+                    }
+
+                    p {
+                        font-size: 1em;
+                    }
+                }
+            }
+        }
+    }
+}

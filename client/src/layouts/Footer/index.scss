@@ -1,0 +1,141 @@
+@mixin MyFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// @include MyFlex;
+footer {
+    background-color: #f4f4f4;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .footerLeftBox {
+        width: 316px;
+        padding: 30px 0px 30px 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        img {
+            max-width: 250px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .socialMediaBox {
+            display: flex;
+            gap: 20px;
+            font-size: 23px;
+            cursor: pointer;
+            align-items: center;
+
+            .icon {
+                color: black;
+                transition: 0.1s;
+            }
+
+            .icon:hover {
+                transition: 0.1s;
+                color: #ffab00;
+            }
+        }
+
+    }
+
+    .footerRightBox {
+        width: 1200px;
+        display: flex;
+        gap: 70px;
+        flex-wrap: wrap;
+        @include MyFlex;
+        align-items: start;
+
+        .footerBox {
+            width: 310px;
+            padding: 30px;
+            @include MyFlex;
+            flex-direction: column;
+            gap: 20px;
+
+            .footer-link {
+                color: black;
+                &:hover{
+                    color: orange;
+                }
+            }
+
+            span {
+                font-size: 35px;
+            }
+
+            p {
+                font-size: 17px;
+                transition: 0.4s;
+
+            }
+
+            p:hover {
+                color: #ffab00;
+                cursor: pointer;
+                transition: 0.4s;
+            }
+
+            .footerLine {
+                width: 30px;
+                height: 1.3px;
+                background-color: black;
+            }
+        }
+    }
+
+    .copyRider {
+        border-top: 1px solid gray;
+        padding: 20px 100px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        justify-content: space-between;
+        align-items: center;
+
+        p {
+            font-size: 18px;
+            display: flex;
+            gap: 4px;
+
+            span {
+                color: #ffab00;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1070px) {
+    footer {
+        .footerRightBox {
+            gap: 10px;
+        }
+
+        .copyRider {
+            padding: 20px 0;
+            justify-content: center;
+            overflow: hidden;
+            gap: 20px;
+
+            p {
+                text-align: center;
+                font-size: .7em;
+            }
+            img{
+                display: none;
+            }
+        }
+    }
+
+}
+

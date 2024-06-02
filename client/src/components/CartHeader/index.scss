@@ -1,0 +1,44 @@
+.cart-header {
+    width: 100%;
+    min-height: 300px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+
+
+    .bottom-img {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    .header-bg-img {
+        background-image: url('https://topbike-store-demo.myshopify.com/cdn/shop/files/Banner-L2P.jpg?v=1613576665');
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 300px;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        filter: contrast(50%);
+    }
+
+    h1 {
+        font-size: 40px;
+        color: white;
+    }
+
+    p {
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+    }
+
+}

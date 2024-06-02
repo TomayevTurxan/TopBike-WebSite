@@ -1,0 +1,43 @@
+.shop-header {
+    max-height: 220px;
+    width: 100%;
+    padding: 120px 0 30px 0;
+    text-align: center;
+    position: relative;
+
+    .backImg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        filter: contrast(50%);
+    }
+
+    .bottom-img {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    p {
+        font-weight: bold;
+        letter-spacing: 2px;
+        font-size: 20px;
+
+        span {
+            color: goldenrod;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .shop-header{
+        display: none;
+    }
+}

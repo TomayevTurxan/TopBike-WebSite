@@ -1,0 +1,40 @@
+@mixin MyFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// @include MyFlex;
+
+#informSection {
+    background-color: white;
+    width: 100%;
+    height: 45vh;
+    padding: 0px 30px;
+
+    .swiper {
+        width: 100%;
+        height: 100%;
+    }
+
+    .swiper-slide {
+        @include MyFlex;
+
+        .informBox {
+            height: 45%;
+            @include MyFlex;
+            flex-direction: column;
+            width: 100%;
+            border: 1px solid rgba(128, 128, 128, 0.468);
+
+            img {
+                max-width: 50px;
+            }
+
+            p {
+                margin: 10px 0px;
+                font-size: 20px;
+            }
+        }
+    }
+}

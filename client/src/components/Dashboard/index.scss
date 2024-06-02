@@ -1,0 +1,241 @@
+.dashboard {
+    width: 100%;
+    padding: 0 20px;
+    background-color: rgb(218, 218, 218);
+    min-height: 100vh;
+
+    h1 {
+        padding: 30px 0;
+        letter-spacing: 3px;
+        text-align: center;
+    }
+
+    .statistics {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .item {
+            padding: 10px;
+            width: 30%;
+            height: 150px;
+            border-radius: 12px;
+            color: white;
+
+            h2 {
+                font-size: 2.5em;
+            }
+
+            p {
+                color: rgb(174, 174, 174);
+                margin: 10px 0;
+            }
+
+        }
+
+        .one {
+            background: rgb(0, 21, 36);
+            background: linear-gradient(10deg, rgba(0, 21, 36, 1) 18%, rgba(0, 1, 200, 1) 85%);
+        }
+
+        .two {
+            background: rgb(0, 21, 36);
+            background: linear-gradient(10deg, rgba(0, 21, 36, 1) 18%, rgba(200, 93, 0, 1) 85%);
+            display: flex;
+            align-items: start;
+            justify-content: space-between;
+
+            button {
+                padding: 15px 5px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-weight: bold;
+                letter-spacing: 2px;
+                background-color: rgb(55, 55, 55);
+                color: white;
+                transition: all .3s;
+
+                &:hover {
+                    color: black;
+                    background-color: #fff;
+                }
+            }
+        }
+
+        .three {
+            background: rgb(0, 21, 36);
+            background: linear-gradient(10deg, rgba(0, 21, 36, 1) 0%, rgba(0, 189, 200, 1) 53%);
+        }
+    }
+}
+
+.commentsOfProduct {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    max-height: 500px;
+    background-color: white;
+    overflow-y: scroll;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+
+    .middleBox {
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        .covering {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 12;
+            background-color: transparent;
+        }
+
+        .peopleCommentBox {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            padding: 0 10px;
+
+            .imgBox {
+                height: 100%;
+                width: 50px;
+                padding: 10px 0px;
+                display: flex;
+                justify-content: center;
+                align-items: start;
+
+                .peopleBox {
+                    height: 40px;
+                    width: 40px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    background: gray;
+
+                    img {
+                        max-width: 100%;
+                    }
+                }
+            }
+
+            .emailBox {
+                padding: 10px 20px 10px 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                align-items: start;
+                text-align: start;
+                width: 320px;
+                gap: 9px;
+                position: relative;
+
+                .heartBox {
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 5px;
+
+                    i {
+                        cursor: pointer;
+                    }
+
+                    p {
+                        font-size: 15px;
+                    }
+                }
+
+                .replayBtn {
+                    position: absolute;
+                    bottom: 10px;
+                    right: 10px;
+                    cursor: pointer;
+                    font-size: 12px;
+                }
+
+                p {
+                    font-size: 10px;
+                }
+            }
+
+            .replyCount {
+                color: gray;
+                font-size: .8em;
+                cursor: pointer;
+
+                &:hover {
+                    color: #DAA520;
+                }
+            }
+        }
+
+        .replayBox {
+            width: 320px;
+            text-align: start;
+            display: flex;
+            gap: 10px;
+            position: relative;
+            height: 0;
+            overflow: hidden;
+            // transition: all .3s;
+
+            p {
+                font-size: 12px;
+                padding: 0px 20px 0px 0px;
+                margin-bottom: 5px;
+
+            }
+
+            .width {
+                width: 25px;
+            }
+
+            .replayImgBox {
+                height: 28px;
+                width: 28px;
+                border-radius: 50%;
+                background: red;
+                overflow: hidden;
+
+                img {
+                    max-width: 100%;
+                }
+
+            }
+
+            .heartBox {
+                position: absolute;
+                top: 10px;
+                right: 8px;
+                display: flex;
+                gap: 5px;
+
+                i {
+                    cursor: pointer;
+                    font-size: 10px;
+                }
+
+                span {
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}
+
+.comment-open {
+    opacity: 1 !important;
+    visibility: visible !important;
+}

@@ -1,0 +1,68 @@
+@mixin MyFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// @include MyFlex;
+
+#aboutDownSection {
+    background-color: white;
+    @include MyFlex;
+    flex-direction: column;
+    padding: 0px 0px 80px;
+
+    h1 {
+        font-size: 40px;
+        padding: 40px 0px 35px;
+    }
+
+    span {
+        text-align: center;
+        padding: 0px 0px 40px;
+        max-width: 600px;
+    }
+
+    .aboutPeopleBox {
+        @include MyFlex;
+        gap: 25px;
+        flex-wrap: wrap;
+
+        .peopleCard {
+
+            .peopleImgBox {
+                overflow: hidden;
+                background-color: black;
+                @include MyFlex;
+                cursor: pointer;
+
+                img {
+                    max-width: 260px;
+                    transition: all 0.5s;
+                }
+
+                img:hover {
+                    filter: grayscale(100%);
+                }
+            }
+
+            .peopleTextBox {
+                padding: 20px;
+                @include MyFlex;
+                flex-direction: column;
+                gap: 10px;
+
+                h4 {
+                    font-size: 25px;
+                }
+
+                p {
+                    font-size: 16px;
+                    color: rgba(0, 0, 0, 0.866);
+                }
+            }
+        }
+    }
+
+
+}
